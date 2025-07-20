@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌊 Palette de Couleurs - Thème Bleu Marine */
+:root {
+  --navy-light: #1e3a8a;
+  --navy-dark: #0f1e4d;
+  --navy-primary: #1e40af;
+  --navy-accent: #3b82f6;
+  --navy-hover: #172554;
+}
+
+/* 📌 Sidebar (Navigation) */
+.sidebar {
+  @apply bg-[var(--navy-dark)] text-white h-screen p-6 flex flex-col justify-between shadow-2xl transition-all duration-300;
+}
+
+.sidebar a {
+  @apply flex items-center text-gray-300 text-base font-medium py-3 px-5 rounded-lg hover:bg-[var(--navy-hover)] hover:text-white transition-all duration-300;
+}
+
+.sidebar a svg {
+  @apply mr-4 text-lg;
+}
+
+/* 🏆 Cartes Statistiques */
+.card {
+  @apply p-6 bg-white rounded-2xl shadow-md flex flex-col items-center transform hover:scale-105 transition-all duration-300;
+}
+
+.card-title {
+  @apply text-sm text-gray-500 font-semibold uppercase tracking-wide;
+}
+
+.card-value {
+  @apply text-3xl font-extrabold text-[var(--navy-primary)];
+}
+
+.card-trend {
+  @apply text-sm mt-2 font-medium;
+}
+
+/* 🟦 Boutons */
+.btn-primary {
+  @apply bg-[var(--navy-accent)] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-blue-600 transition-all duration-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-red-700 transition-all duration-300;
+}
+
+/* 📊 Tableau */
+.table {
+  @apply w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+.table th {
+  @apply bg-[var(--navy-primary)] text-white text-left p-5 uppercase tracking-wide;
+}
+
+.table td {
+  @apply p-5 border-t border-gray-200 text-gray-700 text-sm;
+}
+
+/* ✅ Statuts */
+.status-done {
+  @apply bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+}
+
+.status-failed {
+  @apply bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide;
+}
+
+/* ✨ Effets Visuels */
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar a:hover {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌙 Mode Sombre */
+.dark .sidebar {
+  @apply bg-gray-900;
+}
+
+.dark .main-content {
+  @apply bg-gray-800 text-white;
+}
+
+.dark .card {
+  @apply bg-gray-700 text-white;
+}
+
+.dark .table {
+  @apply bg-gray-700 text-white;
+}
+
+.dark .table th {
+  @apply bg-gray-800;
+}
+
+.dark .btn-primary {
+  @apply bg-blue-500 hover:bg-blue-700;
+}

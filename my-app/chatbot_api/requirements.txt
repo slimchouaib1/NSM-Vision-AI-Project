@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+llama-index-core
+llama-index-embeddings-huggingface
+urllib3 

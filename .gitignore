@@ -1,0 +1,37 @@
+# Node
+node_modules/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+build/
+dist/
+
+# Misc
+*.swp
+*.swo
+
+# Uploads
+my-app/backend/uploads/
+
+# Coverage
+coverage/
+
+# Others
+*.secret
+*.bak
+*.tmp
